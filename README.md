@@ -26,6 +26,8 @@ You can get updated for each new version release if you [subscribe to the newsle
 
 ## Live Website
 
+![](http://arsnippet.yingjiehu.com/tutorial/A-RSnippet.png)
+
 * [Official Hexo A-RSnippet theme website](http://arsnippet.yingjiehu.com)
 * Please fork the repo and add your site here.
 
