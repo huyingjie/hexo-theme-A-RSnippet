@@ -137,9 +137,9 @@ If you want to customize the theme, please try using following methods. There is
 	your_site_folder
 	| -- source
 	| -- css
-        | -- arsnippet.css
+         | -- arsnippet.css
 	| -- js
-        | -- arsnippet.js
+         | -- arsnippet.js
 	```
 	You can see the example in the `exampleSite` folder.
 
@@ -153,8 +153,8 @@ If you want to customize the theme, please try using following methods. There is
 		```
 		your_site_folder
        | -- source
-            | -- img
-                 | -- cover-image.png
+             | -- img
+                  | -- cover-image.png
 		```
 		The same logic can be applied to most types of files.
 
