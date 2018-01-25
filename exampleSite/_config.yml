@@ -2,7 +2,7 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 # title can include HTML code.
-title: A-RSnippet <a class="github-button" href="https://github.com/huyingjie/hexo-theme-A-RSnippet" data-icon="octicon-star" data-show-count="true" aria-label="Star huyingjie/hexo-theme-A-RSnippet on GitHub">Star</a>
+title: A-RSnippet<br><a href="" target="_blank"><img src="https://img.shields.io/badge/Release-v0.1.0-red.svg"></a>
 description: A website for A-RSnippet Hexo Theme
 author: Yingjie Hu
 language: en
@@ -245,7 +245,7 @@ google_analytics: UA-38355881-1            # Format: UA-xxxxxx-xx
 # Click "Alternative methods" => Select "HTML tag" => copy the string in the "content" property of "meta" element
 # <meta name="google-site-verification" content="xxxxxx" />
 # Input xxxxxx below
-google_site_verification: wtCjI-zcpr2FYwWS3sI4OWzMK9e7VomDrZyxpVUUIng
+google_site_verification: g5BseDGQ1hWwdbBPJLKNfbC6xNOaM3X4LnKEMAvx_tI
 
 bing_site_verification:
 yandex_site_verification:
