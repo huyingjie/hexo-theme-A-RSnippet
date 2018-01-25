@@ -340,9 +340,7 @@ Adding new features, fixing bugs, answering questions in the forum and [Discord]
 
 ## Change Log
 
-* v0.1.0
-	* 2018-01-23 Make an `exampleSite` folder included in the theme folder
-	* 2018-01-24 Write documentation
+Change Log is on <a href="http://yingjiehu.com/a-rsnippet-hexo-theme/">yingjehu.com</a>.
 
 ## License
 
