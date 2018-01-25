@@ -203,7 +203,7 @@ There are several ways you can help:
 
 	My native language is Chinese, not English. Please help.
 3. Report issue
-4. Help people on the forum and [Discord](https://discord.gg/CB6CPzq)
+4. Help people on the [forum](https://arsnippet.freeflarum.com/) and [Discord](https://discord.gg/CB6CPzq)
 
 ## Existing Bugs
 
@@ -226,7 +226,7 @@ The theme cannot exist without reference to other themes.
 
 There are two main places to get help with A-RSnippet theme:
 
-1. Forum
+1. [forum](https://arsnippet.freeflarum.com/)
 2. [Discord](https://discord.gg/CB6CPzq)
 
 Except for a private channel on Discord, please use English only.
@@ -283,7 +283,7 @@ Example:
 
 * [GitHub issue](https://github.com/huyingjie/hexo-theme-A-RSnippet/issues)
 
-	This is the only method to report issues. Please go to forum or [Discord](https://discord.gg/CB6CPzq) to seek for help except issues and feature request.
+	This is the only method to report issues. Please go to [forum](https://arsnippet.freeflarum.com/) or [Discord](https://discord.gg/CB6CPzq) to seek for help except issues and feature request.
 
 <a id="donation"></a>
 
@@ -308,11 +308,11 @@ There are four ways:
 1. Star the [repo](https://github.com/huyingjie/hexo-theme-A-RSnippet/).
 2. [Patreon (recurring, monthly)](https://www.patreon.com/arsnippet)
 
-	GitHub issue section is for issues or future features only. All seek-for-help activity should take place in the forum or [Discord](https://discord.gg/CB6CPzq).
+	GitHub issue section is for issues or future features only. All seek-for-help activity should take place in the [forum](https://arsnippet.freeflarum.com/) or [Discord](https://discord.gg/CB6CPzq).
 
 	* For people who don't donate through Patreon:
 
-		If you ask a question via [Discord](https://discord.gg/CB6CPzq), you must use English and write a post in English in the forum (soon!) to show how you solve the problem. You must send me the link to the post. Otherwise, I will not answer your question(s) in the future.
+		If you ask a question via [Discord](https://discord.gg/CB6CPzq), you must use English and write a post in English in the [forum](https://arsnippet.freeflarum.com/) to show how you solve the problem. You must send me the link to the post. Otherwise, I will not answer your question(s) in the future.
 
 	* For people who donate through Patreon:
 
@@ -322,14 +322,14 @@ There are four ways:
 
 		1. You can suggest any feature you want. I will create a poll of a list of features to be developed after each release. The polls are shown only to you. The top items will be taken care of first.
 		2. You can ask me questions in Chinese or English in the private channel on [Discord](https://discord.gg/CB6CPzq).
-		3. You will not be obliged to write a post in English in the forum. I will do it for you.
+		3. You will not be obliged to write a post in English in the [forum](https://arsnippet.freeflarum.com/). I will do it for you.
 
 3. [itch (one-time)](https://huyingjie.itch.io/give-a-tip-hexo-a-rsnippet)
 4. [Gumroad (one-time)](https://gumroad.com/l/bsdZQ)
 
 ## Translation
 
-Adding new features, fixing bugs, answering questions in the forum and [Discord](https://discord.gg/CB6CPzq) will take me an enormous amount of time. Hence, I decided to give up maintaining Chinese documentation. If you want to translate it into other languages, please feel free to do it. You can add a link here after completion.
+Adding new features, fixing bugs, answering questions in the [forum](https://arsnippet.freeflarum.com/) and [Discord](https://discord.gg/CB6CPzq) will take me an enormous amount of time. Hence, I decided to give up maintaining Chinese documentation. If you want to translate it into other languages, please feel free to do it. You can add a link here after completion.
 
 ## License
 
