@@ -1,0 +1,195 @@
+---
+layout: layout
+---
+<style>
+    .bg-header {
+        height: 560px;
+        background-color: #62A4FF;
+    }
+
+    /*icon*/
+    .bg-header .avatar img {
+        border-radius: 50%;
+        margin-top: 50px;
+        max-width: 170px;
+    }
+
+    .bg-header h1 {
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(15, 15, 15, .3);
+        color: white;
+    }
+
+    .bg-header h2 {
+        font-size: 18px;
+        margin-top: 12px;
+        color: white;
+    }
+    /*presentation*/
+   .works-area {
+        margin-top: -150px;
+    }
+
+    .works-area .works-item {
+        border-radius: 2px;
+        border: 1px solid #eee8d5;
+        margin-bottom: 50px;
+        box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
+        background: white;
+        padding: 5px 25px;
+    }
+
+    .works-item-img {
+        margin: auto -26px;
+    }
+
+    .works-item-img img {
+        width: 100%;
+    }
+
+    .works-content {
+        padding-top: 15px;
+        display: block;
+    }
+
+    .works-area .footer {
+        padding-top: 10px;
+        border-top: thin #eee solid;
+    }
+
+    .works-area .footer .portfolio-button {
+        padding: 7px 9px;
+        border-radius: 2px;
+        float: right;
+        margin: 8px 0;
+        font-size: 16px;
+        background-color: #ffff;
+        border: 1px solid rgb(213, 214, 216);
+        color: #a5a7aa;
+        font-weight: bold;
+        width: 80px;
+    }
+
+    .works-area .footer .portfolio-button:hover {
+      background-color: rgb(213, 214, 216);
+      color: white;
+    }
+
+    .works-item .title {
+        padding-top: 6px;
+        color: rgb(78, 78, 78)
+    }
+
+    .works-item .title h3 {
+        display: inline-block;
+        margin: 0 15px;
+        height: 33px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .works-item .title .title-date {
+        float: right;
+        font-size: 18px;
+    }
+
+    .works-item .use span {
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 0 4px;
+        border: thin solid #795548;
+    }
+
+    .works-item .subtitle {
+        margin: 0;
+        font-size: 17px;
+        color: inherit;
+
+    }
+    @media screen and (max-width: 400px) {
+        .works-item .footer .use {
+            font-size: 14px;
+        }
+
+        .works-item .works-item-img {
+            height: 200px;
+        }
+
+        .bg-header .avatar img {
+            max-width: 150px;
+        }
+
+        .bg-header h1 {
+            font-size: 24px;
+        }
+
+        section .works-area {
+            margin-top: -210px;
+        }
+    }
+</style>
+
+<article class="works-container" style="background-color: #fafafa">
+  <div class="container">
+    <div class="row " >
+      <div class="col col-sm-10 col-sm-offset-1
+                  col-md-8 col-md-offset-2">
+      </div>
+    </div>
+  </div>
+    <header>
+        <div class="bg-header">
+            <div class="profile container justify-content-center">
+                <div class="avatar">
+                    <img src="<%= config['sidebar-avatar-url'] %>" style="margin: auto; display: block; padding-top:20px">
+                </div>
+                <div class="personal-profile text-center">
+                    <h1>
+                        <%= config.author %>
+                    </h1>
+                    <% if (page.subtitle) {%>
+                    <h2><%= page.subtitle %></h2>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <section class="row">
+            <div class="col col-sm-10 col-sm-offset-1
+                        col-md-8 col-md-offset-2
+                      works-area">
+                <% for(var i in page.project){ %>
+                <div class="works-item">
+                    <div class="title">
+                        <h3><%= page.project[i].title %></h3>
+                        <span class="title-date text-muted">
+                            <%= page.project[i].date %>
+                        </span>
+                    </div>
+                    <div class="works-item-img">
+                        <img src="<%= page.project[i].img_link %>">
+                    </div>
+                    <div class="works-content">
+                        <div class="subtitle"> <%- page.project[i].subtitle %> </div>
+                        <div class="text-muted"> <%- page.project[i].description %> </div>
+                    </div>
+                    <div class="footer clearfix">
+                        <span class="use text-warning">
+                            <% for (var arrayVal in page.project[i].use ){ %>
+                            <span>
+                              <%= page.project[i].use[arrayVal] %>
+                            </span>
+                            <% } %>
+                        </span>
+                        <a class="btn portfolio-button" href="<%= page.project[i].project_link %>" target="_blank"><%= page.project[i]["button-text"] %></a>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </section>
+    </div>
+</article>

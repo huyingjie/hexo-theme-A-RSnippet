@@ -1,0 +1,137 @@
+---
+layout: layout
+---
+<style>
+    .poetry-container {
+        background-color: rgba(255, 248, 220, 0.5);
+        padding-top: 43px;
+        margin-top: -43px;
+        text-align: center;
+    }
+
+    .poetry-container .poetry-content {
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        margin: 100px auto 0px;
+        overflow: auto;
+        max-width: 90%;
+        max-height: 700px;
+        display: inline-block;
+        text-align: left;
+        padding: 20px 15px 25px;
+    }
+
+    .poetry-head {
+        width: 100%;
+        height: 56px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+    }
+
+    .poetry-container .poetry-content h2 {
+        color: #fff;
+        font-family: STkaiti;
+        font-size: 34px;
+        text-indent: 65px;
+        float: left;
+        margin-top: 0;
+    }
+
+    .poetry-container .poetry-content h2 span {
+        background-color: black;
+        padding: 20px 8px;
+        border-radius: 3px;
+    }
+
+    .poem-subtitle{
+      padding: 80px 5px 0px 40px;
+      background: black;
+      color: white;
+      margin: 80px 5px 0 10px;
+      padding: 10px 3px;
+    }
+
+    .poetry-container .poetry-content p {
+        clear: both;
+        font-size: 24px;
+        font-family: STSong;
+        letter-spacing: 8px;
+        text-shadow: 0 0 1px rgba(15, 15, 15, .3);
+        text-indent: 63px;
+        line-height: 40px;
+        margin: 0;
+    }
+
+    /* ipad */
+    @media screen and (max-width: 768px) {
+        .poetry-container .poetry-content {
+            max-height: 480px;
+            max-width: 100%;
+            margin: 80px auto 0;
+            padding-bottom: 10px;
+        }
+
+        .poetry-container .poetry-content p {
+            font-size: 16px;
+            text-indent: 46px;
+            line-height: 33px;
+            letter-spacing: 6px;
+            font-family: unset;
+        }
+
+        .poetry-container .poetry-content h2 {
+            margin-right: 6px;
+            font-size: 22px;
+            text-indent: 24px;
+            font-family: unset;
+        }
+
+        .poetry-container .poetry-content h2 span {
+            padding: 8px 5px;
+        }
+
+        .poem-subtitle {
+
+        }
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 400px) {
+        .poetry-container .poetry-content {
+            max-height: 410px;
+            padding-bottom: 20px;
+        }
+
+        .poetry-container .poetry-content p {
+            line-height: 30px;
+            letter-spacing: 3px;
+        }
+
+    }
+
+
+</style>
+<div class="poetry-container">
+    <div class="poetry-content" style="background-repeat:no-repeat; background-image:url(<%- page["poem-bg"] %>); max-width: <%= page["max-width"] %>">
+        <div class="poetry-head"></div>
+        <h2>
+          <span>
+            <%= page.title %>
+          </span>
+        </h2>
+        <% if (page.subtitle) { %>
+          <p> <span class="poem-subtitle"><%= page.subtitle %> </span></p>
+        <% } %>
+        <%- page.content %>
+    </div>
+</div>
+
+<% if(page.comments) {%>
+  <div class="container">
+    <div class="col-lg-8 col-lg-offset-1 col-sm-9">
+      <%- partial('_partial/comments') %>
+  </div>
+<% } %>
+</div>

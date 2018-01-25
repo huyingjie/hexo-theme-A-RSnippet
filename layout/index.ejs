@@ -1,0 +1,35 @@
+---
+layout: layout
+---
+<!-- index.ejs -->
+<article class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <% if (config.sidebar) {%>
+        <div class="row">
+            <header class="intro-header">
+                <div class="container">
+                    <div class="site-heading text-center">
+                        <div class="about-me">
+                            <!--Sidebar about me: mobile header-->
+                            <% if (config['sidebar-avatar-url']) {%>
+                                <img src="<%= config['sidebar-avatar-url'] %>" class="avatar">
+                            <% } %>
+                            <h5><%= config.author %></h5>
+                            <p><%- config['sidebar-about-description'] %></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <% } %>
+</article>
+<div class="container homepage">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+          <% page.posts.each(function(post){ %>
+            <%- partial('_partial/index-post-list', {post: post}) %>
+          <% }) %>
+          <%- partial('_partial/pagination') %>
+        </div>
+        <%- partial('_partial/sidebar-profile') %>
+    </div>
+</div>

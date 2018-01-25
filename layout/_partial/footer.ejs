@@ -1,0 +1,153 @@
+<!-- footer.ejs -->
+<footer>
+    <div class="text-center">
+      <ul class="list-inline">
+          <% if (config.rss.enable) { %>
+              <li>
+                  <a href="<%= config.rss.url ? config.rss.url : config.root + 'atom.xml' %>" target="_blank">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+          <% if (config.twitter_username) { %>
+              <li>
+                  <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+          <% if (config.zhihu_username) { %>
+              <li>
+                  <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa  fa-stack-1x fa-inverse">知</i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+          <% if (config.weibo_username) { %>
+              <li>
+                  <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+          <% if (config.facebook_username) { %>
+              <li>
+                  <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+          <% if (config.github_username) { %>
+              <li>
+                  <a target="_blank"  href="https://github.com/<%= config.github_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+          <% if (config.linkedin_username) { %>
+              <li>
+                  <a target="_blank"  href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+          <% if (config.email) { %>
+              <li>
+                  <a href="mailto:<%= config.email %>" target="_blank">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+
+      </ul>
+     <div class="text-muted copyright">
+            &copy;
+            <% if (config.footer.since === new Date().getFullYear()) {%>
+              <%= config.footer.since %>
+            <%} else {%>
+            <%= config.footer.since %> - <%= new Date().getFullYear() %>
+            <% } %>
+            <% if (config.footer.icon) {%>
+              <i class="fa fa-<%= config.footer.icon %>"></i>
+            <%} else {%>
+              <i class="fa fa-heart"></i>
+            <% } %>
+            <%= config.footer.copyright || config.author %>
+        <br>
+          <% if (config.footer.powered) {%>
+              Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+          <% } %>
+          <% if (config.footer.powered && config.footer.theme) {%>
+            |
+          <% } %>
+          <% if (config.footer.theme) {%>
+              Theme - <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet" target="_blank">A-RSnippet</a> v<%= config.version %>
+          <% } %>
+          <%- config.footer.custom_text %>
+      </div>
+    </div>
+</footer>
+
+<!-- Custom Theme JavaScript -->
+<%- js('js/main.js') %>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<% if (config.swiftype_key) { %>
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','<%= config.swiftype_key%>','2.0.0');
+</script>
+<% } %>

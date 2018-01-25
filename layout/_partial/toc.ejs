@@ -1,0 +1,12 @@
+<% if(config.toc.enable){ %>
+  <div class="hidden-xs col-sm-3 toc-col">
+    <div class="toc-wrap">
+        Table of Contents
+        <% if(page["toc_number_disable"]) {%>
+          <%- toc(page.content, {list_number: false}) %>
+        <% } else { %>
+          <%- toc(page.content, {list_number: true}) %>
+        <% } %>
+    </div>
+  </div>
+<% } %>

@@ -1,0 +1,33 @@
+---
+layout: layout
+---
+<article class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div id='tag_cloud'>
+                <% site.tags.map(function(tag){ %>
+                  <a href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+                <% }) %>
+            </div>
+
+            <% site.tags.map(function(tag){ %>
+              <div class="one-tag-list">
+                  <div class="fa fa-tag tag-icon" id="<%= tag.name %>">
+                      <span class="tag-text"><%= tag.name %></span>
+                  </div>
+                  <% tag.posts.map(function(post){ %>
+                    <div class="post-preview">
+                        <a href="<%- config.root %><%- post.path %>">
+                            <h2 class="tag-post-title"><%- post.title || "Untitled" %></h2>
+                            <% if (post.subtitle && post.subtitle.length) { %>
+                            <h3 class="tag-post-subtitle"><%- post.subtitle %></h3>
+                            <% } %>
+                        </a>
+                    </div>
+                    <hr>
+                <% }) %>
+              </div>
+            <% }) %>
+        </div>
+    </div>
+</article>

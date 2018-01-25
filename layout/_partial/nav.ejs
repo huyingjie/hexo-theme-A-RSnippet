@@ -1,0 +1,70 @@
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" id="nav-top" data-ispost = "<%- is_post() %>" data-istags="<%- is_tag() %>
+" data-ishome = "<%- is_home() %>" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand animated pulse">
+              <a class="brand-logo" href="<%= config.root %>">
+              <%= config.title %>
+              </a>
+              <!-- LeetCode Solution by Yingjie Hu -->
+            </span>
+            <span class="site-subtitle">
+              <br><a class="github-button" href="https://github.com/huyingjie/checklist-checklist" data-show-count="true" aria-label="Star huyingjie/checklist-checklist on GitHub">Star</a>
+              <% if(config.subtitle) {%>
+                <%# config.subtitle %>
+              <% } %>
+            </span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="website_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% for (var i in config.menu){ %>
+                      <li>
+                        <a href="<%- url_for(config.menu[i]) %>"><%= i %></a>
+                      </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+var $toggle = document.querySelector('.navbar-toggle');
+var $navbar = document.querySelector('#website_navbar');
+var $collapse = document.querySelector('.navbar-collapse');
+
+$toggle.addEventListener('click', handleMagic)
+function handleMagic(e){
+    if ($navbar.className.indexOf('in') > 0) {
+    // CLOSE
+        $navbar.className = " ";
+        // wait until animation end.
+        setTimeout(function(){
+            // prevent frequently toggle
+            if($navbar.className.indexOf('in') < 0) {
+                $collapse.style.height = "0px"
+            }
+        },00)
+    }else{
+        $collapse.style.height = "auto"
+        $navbar.className += " in";
+    }
+}
+</script>

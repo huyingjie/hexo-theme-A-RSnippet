@@ -1,0 +1,15 @@
+.subscribe {
+  text-align: center;
+  background-color: lightsalmon;
+  padding:10px;
+
+}
+.subscribe a{
+  color: white;
+}
+.subscribe a:hover{
+  color: lightsalmon;
+  padding: 10px;
+  background-color: white;
+  font-family: cursive
+}

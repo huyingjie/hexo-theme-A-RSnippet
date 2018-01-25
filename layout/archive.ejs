@@ -1,0 +1,67 @@
+---
+layout: layout
+---
+<style>
+  header.intro-header {
+      background-image: url('<%= page["cover_img"] || config["cover_default_img"]%>');
+  }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading text-center">
+                    <h1><%= config.archive.title || config.title || ""%></h1>
+                    <span class="post-subtitle"><%= config.archive.subtitle || "" %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<%
+   var lastYear;
+   var lastMonth;
+%>
+
+<article class="container archive">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <% site.posts.sort('date', 'desc').each(function(post){ %>
+                <% var year = post.date.year(); %>
+                <% var month = post.date.format('MM'); %>
+                <% if (lastYear != year) { %>
+                    <% if (lastYear != null) { %>
+                       <% lastMonth = null; %>
+                    <% } %>
+                    <% lastYear = year; %>
+                    <div data-date="<%= year %>">
+                      <span class="fa fa-heart"></span>
+                      <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+                    </div>
+                <% } %>
+
+                <% if (!lastMonth || lastMonth != month) {%>
+                    <% lastMonth = month; %>
+                    <div class="archive-month" data-date="<%= post.date.format('YYYYMM') %>">
+                         <%=  month %>
+                    </div>
+                <% } %>
+                <div>
+                          <h4>
+                              <span class="archive-post-time"><%= post.date.format('MM-DD') %></span>
+                              <span class="archive-post-title">
+                                <a href="<%- config.root %><%- post.path %>" class="archive-post-item"><%- post.title || "Untitled" %></a>
+                              </span>
+                              <% if (post.subtitle && post.subtitle.length) { %>
+                          </h4>
+                          <div class="achive-post-subtitle">
+                              <%- post.subtitle %>
+                          </div>
+                          <% } %>
+                </div>
+          <% }) %>
+        </div>
+    </div>
+</article>

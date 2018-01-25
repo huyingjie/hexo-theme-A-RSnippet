@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- layout.ejs-->
+<%- partial('_partial/head') %>
+<style>
+    header.intro-header {
+        background-image: url('<%= config["cover_img"]%>')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<%- partial('_partial/header') %>
+<%# partial('_partial/new-header') %>
+<!-- Main Content -->
+<%- body || 'Compile Error' %>
+<!-- Footer -->
+<%- partial('_partial/footer') %>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="author" content="<%= config.author %>">
+    <meta name="keyword" content="<%= config.keyword %>">
+    <link rel="canonical" href="<%= config.url + config.root + (page.path || '').replace('index.html', '') %>">
+    <link rel="shortcut icon" href="<%- config.favicon || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png' %>">
+    <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <title>
+        <% if (page.title) { %>
+        <%= page.title + '｜' + config.SEOTitle %>
+        <% } else{ %>
+        <%= config.SEOTitle %>
+        <% } %>
+    </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <%- css('css/main.css') %>
+
+    <% if (config.highlight.enable){ %>
+      <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+      <%- css('css/highlight') %>
+    <% } %>
+
+    <% if (config.disqus_shortname) {%>
+      <script id="dsq-count-scr" src="//<%= config.disqus_shortname %>.disqus.com/count.js" async></script>
+    <% } %>
+
+
+    <% if (config.google_site_verification) {%>
+      <meta name="google-site-verification" content="<%= config.google_site_verification %>" />
+    <% } %>
+
+    <% if (config.bing_site_verification) {%>
+      <meta name="msvalidate.01" content="{{ config.bing_site_verification }}" />
+    <% } %>
+
+    <% if (config.yandex_site_verification) {%>
+      <meta name="yandex-verification" content="{{ config.yandex_site_verification }}" />
+    <% } %>
+
+
+    <%- include('../_third-party/mathjax') %>
+    <%- include('../_third-party/analytics/index') %>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- user customization -->
+    <%- css('/css/arsnippet.css') %>
+    <%- js('/js/arsnippet.css') %>
+</head>

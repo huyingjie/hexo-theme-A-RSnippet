@@ -1,0 +1,27 @@
+---
+layout: layout
+---
+<article class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Difficulty</th>
+              <th>Time</th>
+              <th>Space</th>
+            </tr>
+          <% if (page["search_word"]) {%>
+            <% site.tags.findOne({name: page["search_word"]}).posts.sort('title', 1).each(function(post) {%>
+              <tr>
+              <td><a href="<%- config.root %><%- post.path %>" target="_blank"><%= post.title %></a></td>
+              <td><%= post.difficulty %></td>
+              <td><%= post.time %></td>
+              <td><%= post.space %></td>
+            </tr>
+            <% })%>
+          <% } %>
+          <table>
+        </div>
+    </div>
+</article>
