@@ -14,12 +14,7 @@ description: "Just Do It!"
 <p align="center">The goal of A-RSnippet theme is to be comprehensive.</p>
 
 <div align="center">
-<a href="https://discord.gg/CB6CPzq" target="_blank"><img src="https://img.shields.io/discord/405912462031060992.svg"></a>
-<a href="http://hexo.io" target="_blank"><img src="https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg"></a>
-<a href="https://github.com/huyingjie/hexo-theme-A-RSnippet/releases" target="_blank"><img src="https://img.shields.io/github/release/huyingjie/hexo-theme-A-RSnippet.svg"></a>
-<a href="https://github.com/huyingjie/hexo-theme-A-RSnippet/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-GPL3-pink.svg"></a>
-<!-- <a href="" target="_blank"></a>  -->
-</div>
+<a href="https://github.com/huyingjie/hexo-theme-A-RSnippet/tree/master" target="_blank"><img src="https://travis-ci.org/huyingjie/hexo-theme-A-RSnippet.svg?branch=master" style="display:inline"></a> <a href="https://discord.gg/CB6CPzq" target="_blank"><img src="https://img.shields.io/discord/405912462031060992.svg" style="display:inline"></a> <a href="http://hexo.io" target="_blank"><img src="https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg"style="display:inline"></a> <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet/releases" target="_blank"><img src="https://img.shields.io/github/release/huyingjie/hexo-theme-A-RSnippet.svg" style="display:inline"></a> <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-GPL3-pink.svg" style="display:inline"></a></div>
 
 <div align="center" style="padding-top:20px">
 	<sub>Created and Maintained By <a href="http://yingjiehu.com" target="_blank">Yingjie Hu</a> with ❤️ &nbsp;Follow me on <a href="https://twitter.com/yingjieYJH" target="_blank">Twitter</a>.</sub>
@@ -36,7 +31,7 @@ You can get updated for each new version release if you [subscribe to the newsle
 
 ## Live Website
 
-* [Official Hexo A-RSnippet theme website](http://arsnippets.yingjiehu.com)
+* [Official Hexo A-RSnippet theme website](http://arsnippet.yingjiehu.com)
 * Please fork the repo and add your site here.
 
 ## Features
@@ -146,12 +141,13 @@ If you want to customize the theme, please try using following methods. There is
 
 	```
 	your_site_folder
-		- source
-			- css
-				- arsnippet.css
-			- js
-				- arsnippet.js
+	| -- source
+	| -- css
+         | -- arsnippet.css
+	| -- js
+         | -- arsnippet.js
 	```
+
 	You can see the example in the `exampleSite` folder.
 
 2. Add additional images
@@ -163,9 +159,9 @@ If you want to customize the theme, please try using following methods. There is
 
 		```
 		your_site_folder
-			- source
-				- img
-					- cover-image.png
+       | -- source
+             | -- img
+                  | -- cover-image.png
 		```
 		The same logic can be applied to most types of files.
 
@@ -247,6 +243,7 @@ If you want to use languages other than English, please use the following format
 Example:
 
 [Chinese] 除了一个Discord私人频道(你可以通过Patreon加入), 在论坛和Discord里发言只允许使用英文.
+
 [English] Except a private Discord channel (you can join in via [Patreon](https://www.patreon.com/arsnippet)), all discussions on the forum and Discord must use English only.
 
 ## Learning A-RSnippet Theme
@@ -310,9 +307,11 @@ The goal of the theme is to contain as many features as possible. Hence, this is
 
 If you like A-RSnippet theme and/or appreciate my time dedicated to the theme, please give a tip to support the development of the theme.
 
-There are three ways:
+There are four ways:
 
-1. [Patreon (recurring, monthly)](https://www.patreon.com/arsnippet)
+1. Star the [repo](https://github.com/huyingjie/hexo-theme-A-RSnippet/).
+
+2. [Patreon (recurring, monthly)](https://www.patreon.com/arsnippet)
 
 	GitHub issue section is for issues or future features only. All seek-for-help activity should take place in the forum or [Discord](https://discord.gg/CB6CPzq).
 
@@ -330,8 +329,8 @@ There are three ways:
 		2. You can ask me questions in Chinese or English in the private channel on [Discord](https://discord.gg/CB6CPzq).
 		3. You will not be obliged to write a post in English in the forum. I will do it for you.
 
-2. [itch (one-time)](https://huyingjie.itch.io/give-a-tip-hexo-a-rsnippet)
-3. [Gumroad (one-time)](https://gumroad.com/l/bsdZQ)
+3. [itch (one-time)](https://huyingjie.itch.io/give-a-tip-hexo-a-rsnippet)
+4. [Gumroad (one-time)](https://gumroad.com/l/bsdZQ)
 
 ## Translation
 
