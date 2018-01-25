@@ -4,6 +4,7 @@ category: test
 tag: test
 subtitle: "Elements Included in RSnippets Themes"
 cover_img: copyright-free-images.jpg
+date: 2018-01-24
 ---
 
 The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
@@ -189,7 +190,7 @@ Lorem ipsum dolor sit amet
 
 	l1.concat(l2)
 	```
-	
+
 <small>[[top]](#wrapper)</small>
 
 * * *

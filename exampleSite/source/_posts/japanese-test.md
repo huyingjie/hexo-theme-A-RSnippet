@@ -3,6 +3,7 @@ layout: post
 title: "日本語テスト | Japanese Test"
 category: test
 tag: test
+date: 2018-01-19
 ---
 
 <h2 align="center">源氏物語</h2>

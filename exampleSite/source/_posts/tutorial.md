@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Tutorial: How to Use Hexo's A-Snippet Theme"
-date: 2018-01-24
 categories:
 - tutorial
 tags:
@@ -9,6 +8,7 @@ tags:
 - tutorial
 cover_img: "candle-animation.gif"
 description: "Just Do It!"
+date: 2018-01-25
 ---
 
 <p align="center">The goal of A-RSnippet theme is to be comprehensive.</p>
@@ -30,6 +30,8 @@ If you like A-RSnippet theme, please star the repo ⭐️ . It is the easiest wa
 You can get updated for each new version release if you [subscribe to the newsletter](https://yingjiehu.us17.list-manage.com/subscribe?u=3fe3112157572128dc2da2663&id=dee20b94d7).
 
 ## Live Website
+
+![](A-RSnippet.png)
 
 * [Official Hexo A-RSnippet theme website](http://arsnippet.yingjiehu.com)
 * Please fork the repo and add your site here.
