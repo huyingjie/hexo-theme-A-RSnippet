@@ -135,11 +135,11 @@ If you want to customize the theme, please try using following methods. There is
 
 	```
 	your_site_folder
-		- source
-			- css
-				- arsnippet.css
-			- js
-				- arsnippet.js
+	| -- source
+	| -- css
+		  | -- arsnippet.css
+	| -- js
+		  | -- arsnippet.js
 	```
 	You can see the example in the `exampleSite` folder.
 
@@ -152,9 +152,9 @@ If you want to customize the theme, please try using following methods. There is
 
 		```
 		your_site_folder
-			- source
-				- img
-					- cover-image.png
+		| -- source
+			  | -- img
+					 | -- cover-image.png
 		```
 		The same logic can be applied to most types of files.
 
@@ -236,6 +236,7 @@ If you want to use languages other than English, please use the following format
 Example:
 
 [Chinese] 除了一个Discord私人频道(你可以通过Patreon加入), 在论坛和Discord里发言只允许使用英文.
+
 [English] Except a private Discord channel (you can join in via [Patreon](https://www.patreon.com/arsnippet)), all discussions on the forum and Discord must use English only.
 
 ## Learning A-RSnippet Theme
@@ -325,12 +326,6 @@ There are three ways:
 ## Translation
 
 Adding new features, fixing bugs, answering questions in the forum and [Discord](https://discord.gg/CB6CPzq) will take me an enormous amount of time. Hence, I decided to give up maintaining Chinese documentation. If you want to translate it into other languages, please feel free to do it. You can add a link here after completion.
-
-## Change Log
-
-* v0.1.0
-	* 2018-01-23 Make an `exampleSite` folder included in the theme folder
-	* 2018-01-24 Write documentation
 
 ## License
 
