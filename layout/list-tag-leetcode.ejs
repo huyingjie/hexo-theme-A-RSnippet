@@ -14,7 +14,7 @@ layout: layout
           <% if (page["search_word"]) {%>
             <% site.tags.findOne({name: page["search_word"]}).posts.sort('title', 1).each(function(post) {%>
               <tr>
-              <td><a href="<%- config.root %><%- post.path %>" target="_blank"><%= post.title %></a></td>
+              <td><a href="<%- url_for(post.path) %>" target="_blank"><%= post.title %></a></td>
               <td><%= post.difficulty %></td>
               <td><%= post.time %></td>
               <td><%= post.space %></td>

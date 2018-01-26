@@ -69,7 +69,7 @@ rss:
   enable: true
   url:                    # if empty, use default url, root_path/atom.xml
 
-email: xxx@gmail.com
+# email: xxx@gmail.com
 # weibo_username:
 # zhihu_username:
 github_username: huyingjie
@@ -83,7 +83,7 @@ twitter_username: yingjieYJH
 sidebar: true
 sidebar-about-description: data scientist
 sidebar-avatar-url: https://avatars3.githubusercontent.com/u/4664280?s=460&v=4
-sidebar-description-after-icons: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a><br><br><a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
+sidebar-description-after-icons: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a><br><br><a href="https://arsnippet.freeflarum.com/" target="_blank"><img src="/img/forum.jpg" alt="support my work at patron"></a><br><br><a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
 
 # ---------------------------------------------------------------
 # Hexo official settings
@@ -159,7 +159,7 @@ post_update_date_enable: true
 content_before_post: <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
 # Can contain HTML
 # Appear at the end of the post
-content_after_post: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a> <a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
+content_after_post: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a> <a href="https://arsnippet.freeflarum.com/" target="_blank"><img src="/img/forum.jpg" alt="support my work at patron"></a> <a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
 
 # default cover image
 # example: animated gif as header

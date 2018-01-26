@@ -14,20 +14,6 @@ layout: layout
             <%- config["content_after_post"] %>
           <% } %>
           <hr>
-          <ul class="pager">
-              <% if (page.prev){ %>
-              <li class="previous">
-                  <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="left"
-                     title="<%- page.prev.title %>">&larr; <%- __('Previous Post') %></a>
-              </li>
-              <% } %>
-              <% if (page.next){ %>
-              <li class="next">
-                  <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
-                     title="<%- page.next.title %>"><%- __('Next Post') %>&rarr;</a>
-              </li>
-              <% } %>
-          </ul>
         <%- partial('_partial/comments') %>
         <%- include('_partial/toc')  %>
       </div>

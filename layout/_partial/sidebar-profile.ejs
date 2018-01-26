@@ -19,7 +19,7 @@
             <ul class="list-inline">
                 <% if (config.rss.enable) { %>
                 <li>
-                    <a href="<%= config.rss.url ? config.rss.url : config.root + 'atom.xml' %>" target="
+                    <a href="<%= config.rss.url ? config.rss.url : url_for('atom.xml') %>" target="
                       ">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
