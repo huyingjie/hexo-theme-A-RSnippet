@@ -104,13 +104,13 @@
             <%= config.footer.copyright || config.author %>
         <br>
           <% if (config.footer.powered) {%>
-              Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+              <%- __('footer.powered', '<a target="_blank" href="https://hexo.io">Hexo</a>') %>
           <% } %>
           <% if (config.footer.powered && config.footer.theme) {%>
             |
           <% } %>
           <% if (config.footer.theme) {%>
-              Theme - <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet" target="_blank">A-RSnippet</a> v<%= config.version %>
+              <%- __('footer.theme') %> - <a href="https://github.com/huyingjie/hexo-theme-A-RSnippet" target="_blank">A-RSnippet</a> v<%= config.version %>
           <% } %>
           <%- config.footer.custom_text %>
       </div>

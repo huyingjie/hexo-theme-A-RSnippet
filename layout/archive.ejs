@@ -52,13 +52,13 @@ layout: layout
                           <h4>
                               <span class="archive-post-time"><%= post.date.format('MM-DD') %></span>
                               <span class="archive-post-title">
-                                <a href="<%- url_for(post.path) %>" class="archive-post-item"><%- post.title || "Untitled" %></a>
+                                <a href="<%- url_for(post.path) %>" class="archive-post-item"><%- post.title || __('posts.untitled') %></a>
                               </span>
-                              <% if (post.subtitle && post.subtitle.length) { %>
                           </h4>
-                          <div class="achive-post-subtitle">
-                              <%- post.subtitle %>
-                          </div>
+                          <% if (post.subtitle && post.subtitle.length) { %>
+                            <div class="achive-post-subtitle">
+                                <%- post.subtitle %>
+                            </div>
                           <% } %>
                 </div>
           <% }) %>

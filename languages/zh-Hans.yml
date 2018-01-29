@@ -1,0 +1,24 @@
+author: 博主
+
+posts:
+  date: 创建于
+  update_date: 更新于
+  read_more: 阅读全文
+  untitled: 未命名
+  toc_empty: 此文章未包含目录
+  archive: 归档
+  category: 分类
+  tag: 标签
+
+sidebar:
+  toc: 目录
+
+pagination:
+  newer_posts: 下一页
+  previous_posts: 上一页
+  newer_post: 下一篇
+  previous_post: 上一篇
+
+footer:
+  powered: "由 %s 强力驱动"
+  theme: 主题

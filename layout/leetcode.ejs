@@ -16,13 +16,13 @@ layout: layout
               <% if (page.prev){ %>
               <li class="previous">
                   <a href="<%- url_for(page.prev.path) %>" data-toggle="tooltip" data-placement="left"
-                     title="<%- page.prev.title %>">&larr; <%- __('Previous Post') %></a>
+                     title="<%- page.prev.title %>">&larr; <%- __('pagination.previous_post') %></a>
               </li>
               <% } %>
               <% if (page.next){ %>
               <li class="next">
                   <a href="<%- url_for(page.next.path) %>" data-toggle="tooltip" data-placement="top"
-                     title="<%- page.next.title %>"><%- __('Next Post') %>&rarr;</a>
+                     title="<%- page.next.title %>"><%- __('pagination.newer_post') %>&rarr;</a>
               </li>
               <% } %>
           </ul>

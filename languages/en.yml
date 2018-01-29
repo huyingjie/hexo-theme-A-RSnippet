@@ -1,0 +1,24 @@
+author: Author
+
+posts:
+  date: Date
+  update_date: Updated On
+  read_more: Read More
+  untitled: Untitled
+  toc_empty: Empty TOC
+  archive: Archives
+  category: Categories
+  tag: Tags
+
+sidebar:
+  toc: Table of Contents
+
+pagination:
+  newer_posts: Newer Posts
+  previous_posts: Previous Posts
+  newer_post: Next Post
+  previous_post: Previous Post
+
+footer:
+  powered: "Powered by %s"
+  theme: Theme

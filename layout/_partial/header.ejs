@@ -39,26 +39,26 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                     <div class="site-heading">
-                        <h1><%= page.title %></h1>
+                        <h1><%= page.title || __('posts.untitled')%></h1>
                         <% if (page.subtitle) {%>
                           <div class="post-subtitle"><%- page.subtitle %></div>
                         <% } %>
                         <% if (page.layout === "post") {%>
                           <span class="meta">
-                               <span class="meta-item">Author: <%- page.author || config.author %></span>
-                               <span class="meta-item">Date: <%= page.date.format(config.date_format) %></span>
+                               <span class="meta-item"><%- __('author') %>: <%- page.author || config.author %></span>
+                               <span class="meta-item"><%- __('posts.date') %>: <%= page.date.format(config.date_format) %></span>
                                <% if (config["post_update_date_enable"]) {%>
-                                 <span class="meta-item">Updated on <%= page.updated.format(config.date_format) %></span>
+                                 <span class="meta-item"><%- __('posts.update_date') %>: <%= page.updated.format(config.date_format) %></span>
                                <% } %>
                           </span>
                           <div class="tags text-center">
-                              Category: <% page.categories.forEach(function(category){ %>
+                              <%- __('posts.category') %>: <% page.categories.forEach(function(category){ %>
                               <a class="tag" href="<%= config.root %>categories/#<%= category.name %>"
                                  title="<%= category.name %>"><%= category.name %></a>
                               <% }) %>
                           </div>
                           <div class="tags text-center">
-                              Tags: <% page.tags.forEach(function(tag){ %>
+                              <%- __('posts.tag') %>: <% page.tags.forEach(function(tag){ %>
                               <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>"
                                  title="<%= tag.name %>"><%= tag.name %></a>
                               <% }) %>

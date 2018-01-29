@@ -2,14 +2,14 @@
      style="background-image: url('<%- post["cover_img"]? url_for(post.path) + post["cover_img"] : config["cover_default_img"] %>')">
     <a href="<%- url_for(post.path) %>">
         <h2 class="post-title">
-            <%- post.title || "Untiled" %>
+            <%- post.title || __('posts.untitled') %>
         </h2>
         <% if (post.subtitle && post.subtitle.length) { %>
           <div class="index-subtitle"><%- post.subtitle %></div>
         <% } %>
         <div class="post-meta">
           <span><%= post.date.format(config.date_format) %></span>
-          <% if (config["index_update_date_enable"]) {%><span class="meta-item">Updated on <%= post.updated.format(config.date_format) %></span><% } %>
+          <% if (config["index_update_date_enable"]) {%><span class="meta-item"><%- __('posts.update_date') %> <%= post.updated.format(config.date_format) %></span><% } %>
         </div>
         <div class="post-content-preview">
             <p>
