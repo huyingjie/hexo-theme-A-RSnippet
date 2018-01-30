@@ -205,15 +205,6 @@ There are several ways you can help:
 3. Report issue
 4. Help people on the [forum](https://arsnippet.freeflarum.com/) and [Discord](https://discord.gg/CB6CPzq)
 
-## Existing Bugs
-
-* list-category-leetcode layout
-
-	I used `site.categories.findOne({name: page["search_word"]}).posts.sort('title', 1).each(function(post) {}` to get the posts for a specified categories. There are two bugs that I don't know how to solve.
-
-	* You must use `["language", "python"]` format for the `categories` in the front matter. Otherwise, the post does not appear in the list.
-	* Hyphen (`-`) cannot be included in the category names.
-
 ## Thanks
 
 The theme cannot exist without reference to other themes.
@@ -330,6 +321,11 @@ There are four ways:
 ## Translation
 
 Adding new features, fixing bugs, answering questions in the [forum](https://arsnippet.freeflarum.com/) and [Discord](https://discord.gg/CB6CPzq) will take me an enormous amount of time. Hence, I decided to give up maintaining Chinese documentation. If you want to translate it into other languages, please feel free to do it. You can add a link here after completion.
+
+## Internationalization
+
+* [en](https://github.com/huyingjie/hexo-theme-A-RSnippet/blob/master/languages/en.yml)
+* [zh-Hans](https://github.com/huyingjie/hexo-theme-A-RSnippet/blob/master/languages/zh-Hans.yml)
 
 ## License
 
